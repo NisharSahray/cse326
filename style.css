@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-color: #3c3c3c;
+}
+.container{
+    position: relative;
+}
+
+/* sorry remove dot before img */
+.container .logo img{
+    width: 250px;
+    height: 150px;
+}
+
+/* sorry remove dot before img */
+.container .background img{
+    position: absolute;
+    width: 450px;
+    margin-left: 15%;
+    height: 80vh;
+    opacity: 0.4;
+}
+
+.container .heading{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 35%;
+    min-height: 65vh;
+    margin-left: 100px;
+}
+.container .heading h1{
+    padding-bottom: 15px;
+    font-size: 40px;
+
+}
+.container .heading p{
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.container .heading button{
+    width: 150px;
+    height: 50px;
+    background-color: red;
+    border: 2px  solid transparent;   
+}
+
+.container .image img{
+    margin-left: 50%;
+    width: 700px;
+    height: 400px;
+/* for image reflection */
+
+-webkit-box-reflect: below 2px linear-gradient(transparent, transparent, rgba(0,0,0,0.4));
+}
+
+.container .navbar ul{
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 0;
+    list-style: none;
+}
+.container .navbar ul li{
+    padding: 40px;
+}
+
+
+.empty{
+    position: absolute;
+    clip-path: polygon(77% 0, 100% 0, 100% 100%, 40% 100%);
+    background-color: red;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    z-index: -1000;
+}
+
+
+/* now one team is ready */
+
+/* lets do the code for remaining teams by using javascript */
+
+.list ol{
+    display: flex;
+    position: absolute;
+    list-style: none;
+    margin-left: 30%;
+}
+.list ol li{
+    margin: 25px;
+    font-size: 20px;
+    font-weight: 900;
+    cursor: pointer;
+}
+
+.list ol li:hover, .container .navbar ul li:hover{
+    transform: scale(2, 2);
+}
+
+/* now selection color change */
+
+::selection{
+    background-color: white;
+    color: black;
+}
+
+
+/* now coading for responsive */
+
+
+@media screen and (max-width: 900px){
+    .container .heading{
+        top: 120vh;
+        width: 100%;
+        margin: 0;
+    }
+
+    .container .image img{
+        margin: 0;
+        margin-top: -30px;
+        width: 700px;
+        height: 400px;
+    }
+
+    .container .background img{
+        position: absolute;
+        width: 450px;
+        margin-left: 15%;
+        height: 80vh;
+        top: 120vh;
+        z-index: -1;
+        opacity: 0.4;
+    }
+    
+    .list ol{
+        display: flex;
+        position: absolute;
+        list-style: none;
+        margin-left: 10%;
+
+    }
+
+    .container .navbar ul{
+        display: flex;
+        position: absolute;
+        right: 0;
+        top: 100vh;
+        list-style: none;
+    }
+}
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .logo img {
+            max-width: 150px;
+            margin-bottom: 10px;
+        }
+
+        .background img {
+            width: 100px;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            opacity: 0.1;
+        }
+
+        .heading {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #head {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .heading p {
+            font-weight: 500;
+            color: #555;
+            margin: 10px auto;
+            max-width: 600px;
+        }
+
+        .heading button {
+            padding: 10px 20px;
+            background-color: #d32f2f;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: background 0.3s;
+        }
+
+        .heading button:hover {
+            background-color: #b71c1c;
+        }
+
+        .image img {
+            width: 100%;
+            max-width: 400px;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+
+        .navbar {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .navbar ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .navbar li {
+            font-weight: 500;
+            color: #333;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .navbar li:hover {
+            color: #d32f2f;
+        }
+
+        .empty {
+            height: 10px;
+            background-color: #d32f2f;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .list {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .list ol {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .list li {
+            padding: 8px 16px;
+            background-color: brown;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .list li:hover {
+            background-color: #d32f2f;
+            color: #fff;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            #head {
+                font-size: 1.8rem;
+            }
+
+            .heading p {
+                font-size: 0.9rem;
+                max-width: 90%;
+            }
+
+            .navbar ul {
+                gap: 10px;
+            }
+
+            .list ol {
+                gap: 5px;
+            }
+        }

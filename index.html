@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Sphere</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="ipl logo.png" alt="IPL Logo">
+        </div>
+
+        <div class="background">
+            <img src="rcb logo.jpg" id="logobg" alt="RCB Logo">
+        </div>
+
+        <div class="heading">
+            <h1 id="head">Royal Challengers Bangalore</h1>
+            <p>
+                The Indian Premier League (IPL) is a premier Twenty20 cricket league in India,
+                launched in 2008 by the BCCI. Known for its thrilling matches and global fanbase,
+                it brings together top players from around the world. The IPL has become a blend
+                of intense sports and entertainment, showcasing both established stars and emerging talent.
+            </p>
+            <button onclick="watchHighlights()">WATCH NOW</button>
+        </div>
+
+        <div class="image">
+            <img id="myimage" src="RCB.webp" alt="RCB Team Image">
+        </div>
+
+        <div class="navbar">
+            <ul>
+                <li onclick="goHome()">Home</li>
+                <li onclick="openPerformance()">Performance</li>
+                <li onclick="showRank()">Rank</li>
+            </ul>
+        </div>
+
+        <div class="empty"></div>
+
+        <div class="list">
+            <ol>
+                <li onclick="myFun('CSK.png', 'gold', 'Chennai Super Kings', 'csk logo.png')">CSK</li>
+                <li onclick="myFun('Mii.jpg', 'blue', 'Mumbai Indians', 'Mi logo.jpg')">MI</li>
+                <li onclick="myFun('DLC.jpg', 'dodgerblue', 'Delhi Capitals', 'dc logo.png')">DC</li>
+                <li onclick="myFun('srh2.jpg', 'orangered', 'Sunrisers Hyderabad', 'srh logo.png')">SRH</li>
+                <li onclick="myFun('kings 11 punjab.avif', 'red', 'Kings XI Punjab', 'punjab logo.jpg')">KXIP</li>
+                <li onclick="myFun('RR.webp', '#ff3385', 'Rajasthan Royals', 'rr logo.png')">RR</li>
+                <li onclick="myFun('kkr.jpg', 'purple', 'Kolkata Knight Riders', 'kkr logo.jpg')">KKR</li>
+                <li onclick="myFun('lkn.jpg', 'dodgerblue', 'Lucknow Super Giants', 'lknlogo.jpg')">LKN</li>
+                <li onclick="myFun('GUT.jpg', 'blue', 'Gujarat Titans', 'gt logo.webp')">GT</li>
+            </ol>
+        </div>
+    </div>
+
+    <script>
+        function myFun(image, colour, head, logo) {
+            document.getElementById('myimage').src = image;
+            document.querySelector('.empty').style.backgroundColor = colour;
+            document.querySelector('button').style.backgroundColor = colour;
+            document.getElementById('head').innerText = head;
+            document.getElementById('logobg').src = logo;
+        }
+
+        function goHome() {
+            location.reload(); // Refreshes the page to go back to the initial state
+        }
+
+        function openPerformance() {
+            // Redirects to the individual player performance page of IPL on iplt20.com
+            window.open("https://www.iplt20.com/stats/2024", "_blank");
+        }
+
+        function showRank() {
+            // Redirects to the point table of IPL on iplt20.com
+            window.open("https://www.iplt20.com/points-table/2024", "_blank");
+        }
+
+        function watchHighlights() {
+            const team = document.getElementById('head').innerText;
+            let url;
+            switch (team) {
+                case "Royal Challengers Bangalore":
+                    url = "https://www.youtube.com/results?search_query=RCB+highlights";
+                    break;
+                case "Chennai Super Kings":
+                    url = "https://www.youtube.com/results?search_query=CSK+highlights";
+                    break;
+                case "Mumbai Indians":
+                    url = "https://www.youtube.com/results?search_query=Mumbai+Indians+highlights";
+                    break;
+                default:
+                    url = "https://www.youtube.com/results?search_query=" + team + "+highlights";
+            }
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+</html>
+
+
